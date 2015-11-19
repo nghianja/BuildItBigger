@@ -21,9 +21,11 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:22.1.1'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    // Added for AdMob
+    // Reference: https://discussions.udacity.com/t/execution-failed-for-task-app-predexdebug-in-step-1/24243/9
+    compile 'com.google.android.gms:play-services-ads:8.3.0'
     compile project(':lib_java')
     compile project(':lib_android')
-    // Added for AdMob
-    compile 'com.google.android.gms:play-services:8.3.0'
+    compile project(path: ':backend', configuration: 'android-endpoints')
 }

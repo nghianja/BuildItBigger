@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/BuildItBigger.iml" filepath="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/BuildItBigger.iml" />
       <module fileurl="file://$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/app/app.iml" filepath="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/app/app.iml" />
+      <module fileurl="file://$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/backend/backend.iml" filepath="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/backend/backend.iml" />
       <module fileurl="file://$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/lib_android/lib_android.iml" filepath="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/lib_android/lib_android.iml" />
       <module fileurl="file://$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/lib_java/lib_java.iml" filepath="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/lib_java/lib_java.iml" />
     </modules>

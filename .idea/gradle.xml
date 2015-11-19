@@ -10,6 +10,7 @@
           <set>
             <option value="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger" />
             <option value="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/app" />
+            <option value="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/backend" />
             <option value="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/lib_android" />
             <option value="$USER_HOME$/Repositories/Projapps/GitHub/BuildItBigger/lib_java" />
           </set>
