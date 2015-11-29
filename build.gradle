@@ -17,3 +17,17 @@ allprojects {
         jcenter()
     }
 }
+
+// References:
+// [1] https://discussions.udacity.com/t/last-optional-step-how-to-start-an-external-module-task-from-the-root-build-gradle/24211/13
+// [2] http://trickyandroid.com/gradle-tip-3-tasks-ordering/
+task optional (dependsOn: [":backend:appengineRun", ":app:connectedAndroidTest"]) {
+    evaluationDependsOn ":backend"
+    project(":backend"){
+        appengine{
+            daemon true
+        }
+    }
+}
+optional.mustRunAfter ":backend:appengineRun"
+optional.finalizedBy ":backend:appengineStop"

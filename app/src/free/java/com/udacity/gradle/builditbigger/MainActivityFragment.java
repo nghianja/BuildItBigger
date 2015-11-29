@@ -1,19 +1,27 @@
 package com.udacity.gradle.builditbigger;
 
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-
 /**
  * A placeholder fragment containing a simple view.
+ *
+ * References:
+ * [1] http://stackoverflow.com/questions/24188050/how-to-access-fragments-child-views-inside-fragments-parent-activity
  */
 public class MainActivityFragment extends Fragment {
+
+    private static final String TAG = "MainActivityFragment";
+
+    private ProgressBar mProgressBar;
 
     public MainActivityFragment() {
     }
@@ -22,6 +30,7 @@ public class MainActivityFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_main, container, false);
+        mProgressBar = (ProgressBar) root.findViewById(R.id.progressBar);
 
         AdView mAdView = (AdView) root.findViewById(R.id.adView);
         // Create an ad request. Check logcat output for the hashed device ID to
@@ -33,4 +42,14 @@ public class MainActivityFragment extends Fragment {
         mAdView.loadAd(adRequest);
         return root;
     }
+
+    public void setVisibility(boolean visible) {
+        if (visible) {
+            mProgressBar.setVisibility(View.VISIBLE);
+        } else {
+            mProgressBar.setVisibility(View.INVISIBLE);
+        }
+        Log.d(TAG, "Visibility: " + mProgressBar.getVisibility());
+    }
+
 }

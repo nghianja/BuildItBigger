@@ -1,6 +1,7 @@
 package com.udacity.gradle.builditbigger;
 
 import android.test.AndroidTestCase;
+import android.util.Log;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +14,11 @@ import java.util.concurrent.TimeUnit;
  * [3] http://marksunghunpark.blogspot.ru/2015/05/how-to-test-asynctask-in-android.html
  */
 public class AsyncTaskTest extends AndroidTestCase {
+    private static final String TAG = "AsyncTaskTest";
+
     public void testVerifyGetJoke() {
+        Log.i(TAG, "Executing testVerifyGetJoke()...");
+
         try {
             EndpointsAsyncTask task = new EndpointsAsyncTask();
             task.execute(getContext());

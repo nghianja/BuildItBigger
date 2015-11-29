@@ -56,6 +56,9 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
         Intent intent = new Intent(context, com.udacity.gradle.activity.MainActivity.class);
         intent.putExtra(com.udacity.gradle.activity.MainActivity.TOAST_MESSAGE, result);
         context.startActivity(intent);
+
+        MainActivity activity = (MainActivity) context;
+        activity.mFragment.setVisibility(false);
     }
 
 }

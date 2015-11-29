@@ -12,10 +12,13 @@ import android.view.View;
  */
 public class MainActivity extends AppCompatActivity {
 
+    public MainActivityFragment mFragment;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mFragment = (MainActivityFragment) getSupportFragmentManager().findFragmentById(R.id.fragment);
     }
 
     @Override
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view){
+        mFragment.setVisibility(true);
         new EndpointsAsyncTask().execute(this);
     }
 
